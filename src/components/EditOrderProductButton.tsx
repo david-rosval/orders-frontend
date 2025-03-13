@@ -92,7 +92,7 @@ export default function EditOrderProductButton({
               <label htmlFor="quantityEdited">Quantity: </label>
               <input className="w-20 text-right bg-neutral-100 dark:bg-neutral-800 rounded py-2 px-3" type="number" name="quantityEdited" min={1} defaultValue={orderProduct.quantity} />
             </div>
-            <button type="submit" className="p-4 rounded-lg shadow-lg transition-colors duration-200 ease-in-out inline-block bg-green-400  dark:bg-green-600  hover:bg-green-500/80 dark:hover:bg-green-600/80 font-semibold w-fit mt-5">Confirm & Save</button>
+            <button type="submit" className="p-4 rounded-lg shadow-lg transition-colors duration-200 ease-in-out inline-block bg-green-400  dark:bg-green-600  hover:bg-green-500/80 dark:hover:bg-green-600/80 font-semibold w-fit mt-5 cursor-pointer">Confirm & Save</button>
           </form>
         </div>
       )}
