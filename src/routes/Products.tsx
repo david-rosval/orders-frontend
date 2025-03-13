@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import useProducts from "../hooks/useProducts";
 import DeleteButton from "../components/DeleteButton";
 import { deleteProduct } from "../utils/products.api";
+import { ArrowLeft } from "lucide-react";
 
 export default function Products() {
   const { products, setProducts, loading } = useProducts()
@@ -20,6 +21,7 @@ export default function Products() {
 
   return (
     <div>
+      <Link to={"/"} className="back-button inline-flex items-center gap-3 transition-colors duration-200 ease-in-out text-blue-500 hover:text-blue-600 mb-5">{<ArrowLeft />} Back</Link>
       <h1 className="text-4xl md:text-6xl font-bold mb-10">Products</h1>
       <Link className="p-4 rounded-lg shadow-lg transition-colors duration-200 ease-in-out inline-block bg-slate-400  dark:bg-slate-800  hover:bg-slate-400/80 dark:hover:bg-slate-800/80" to="/add-product">+ New Product</Link>
       {!loading ? !products.length ? (

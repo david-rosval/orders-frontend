@@ -4,6 +4,7 @@ import ChangeStatus from "../components/ChangeStatus";
 import useOrders from "../hooks/useOrders";
 import { formatDate } from "../utils";
 import { deleteOrder } from "../utils/orders.api";
+import { ArrowLeft } from "lucide-react";
 
 export default function MyOrders() {
   const { orders, setOrders, loading } = useOrders()
@@ -33,6 +34,7 @@ export default function MyOrders() {
 
   return (
     <div>
+      <Link to={"/"} className="back-button inline-flex items-center gap-3 transition-colors duration-200 ease-in-out text-blue-500 hover:text-blue-600 mb-5">{<ArrowLeft />} Back</Link>
       <h1 className="text-4xl md:text-6xl font-bold mb-10">My Orders</h1>
       <Link to="/add-order" className="p-4 rounded-lg shadow-lg transition-colors duration-200 ease-in-out inline-block bg-slate-400  dark:bg-slate-800  hover:bg-slate-400/80 dark:hover:bg-slate-800/80">+ New Order</Link>
       {!loading ? !ordersRows.length ? (
