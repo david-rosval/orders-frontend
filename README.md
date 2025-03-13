@@ -22,7 +22,7 @@ To get started with the project, follow these steps:
   ```
 2. Navigate to the project directory:
   ```sh
-  cd orders
+  cd orders-frontend
   ```
 3. Install the dependencies:
   ```sh
